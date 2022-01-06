@@ -1,0 +1,1 @@
+console.log("Je suis dans le fichier utils.js");
