@@ -1,8 +1,10 @@
 // importer notre propre fichier
-require('./utils')
+const name = require('./utils')
+const add = require('./utils') 
 
-const name = 'Lapin Ragnar'
 
 console.log("Je suis dans le fichier app");
 
+console.log(name);
 
+console.log(add(4, 5));
