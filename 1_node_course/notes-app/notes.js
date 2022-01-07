@@ -45,6 +45,15 @@ const removeNote = (title) => {
     
 }
 
+
+const listNotes = () => {
+    const notes = loadNotes()
+    console.log(chalk.inverse('Liste de notes:'));
+    notes.forEach(note => {
+        console.log("titre : " + note.title);
+    });
+}
+
 const saveNotes = (notes) => {
     const dataJSON = JSON.stringify(notes)
     fs.writeFileSync('notes.json', dataJSON)
@@ -63,7 +72,8 @@ const loadNotes = () => {
 export default {
     getNotes,
     addNote, 
-    removeNote
+    removeNote,
+    listNotes
 }
 
 // ne marche plus quand j'ai installé chalk

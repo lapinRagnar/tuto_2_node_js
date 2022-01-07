@@ -55,7 +55,7 @@ yarg.command({
 yarg.command({
     command: 'list',
     describe: 'list your note',
-    handler() {console.log("Afficher toute les notes!");}
+    handler() {notes.listNotes()}
 })
 
 // create read command
