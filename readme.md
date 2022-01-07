@@ -33,4 +33,26 @@ nodemon permet de lancer une commande comme > node app.js mais voir les modif en
 et pour le lancer
 > nodemon app.js
 
+##########################################################################################
+#     passer des arguments dans la ligne de commande
+##########################################################################################
+
+// voir la liste des arguments passer dans la ligne de commande 
+// quand on lance > node app.js
+// console.log(process.argv)
+
+
+const command = process.argv[2]
+
+console.log(command);
+
+// > node app.js mon_argument
+// afficher à l'ecran mon_argument
+
+
+
+
+
+
+
 
