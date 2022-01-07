@@ -25,7 +25,25 @@ yargs.command({
     }
 })
 
+// fonctionalité de suppression de note
+yargs.command({
+    command: 'remove',
+    describe: 'remove a note ',
+    builder: {
+        title: {
+            describe: "note title",
+            demandOption: true, 
+            type: 'string'
+        }
+    },
+    handler: function(argv){
+        console.log("suppression d'une note!");
+        notes.removeNote(argv.title)
+    }
+})
+
 
 // pour l'afficher à l'ecran
 yargs.parse()
+
 
