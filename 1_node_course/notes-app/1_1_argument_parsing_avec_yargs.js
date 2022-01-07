@@ -8,27 +8,32 @@ const yargs = require('yargs')
 // lancer le terminal avec > node nom_app.js argument_1 --essai="salut les amis"
 // retourne un joli tableau
 
-// créer une option (argument) - ajouter
-yargs.command({
-    command: 'ajouter',
-    describe: "tu peux ajouter ce que tu veux!",
-    handler: function (){
-        console.log("Bonjour tout le monde");
-    }
-})
 
 // créer une option (argument) - ajouter
 yargs.command({
     command: 'ajouter',
     describe: "tu peux ajouter ce que tu veux!",
-    handler: function (){
-        console.log("Bonjour tout le monde");
+    builder: {
+        titre: {
+            describe: "voici mon super titre",
+            demandOption: true,
+            type: 'string'
+        },
+        commentaire: {
+            describe: "ceci est super commentaire",
+            demandOption: true,
+            type: 'string'
+        }
+    },
+    handler: function (argv){
+        console.log("Bonjour tout le monde - le titre est: ", argv.titre);
+        console.log("commentaire: ", argv.commentaire);
     }
 })
 
 // pour le lancer > node nom_app --help
-// pour le lancer > node nom_app ajouter
-// créer une option (argument) - ajouter
+// pour le lancer > node nom_app supprimer
+// créer une option --titre et  argument supprimer
 yargs.command({
     command: 'supprimer',
     describe: "supprime les choses inutiles ....",
@@ -38,7 +43,7 @@ yargs.command({
 })
 
 // lire
-// créer une option (argument) - ajouter
+// créer une option (argument) - lire
 yargs.command({
     command: 'lire',
     describe: "liste tout ce qu'on a fait!",
@@ -48,4 +53,4 @@ yargs.command({
 })
 
 // pour l'afficher à l'ecran
-console.log(yargs.argv);
+yargs.parse()
