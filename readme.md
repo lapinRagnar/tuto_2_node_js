@@ -24,6 +24,13 @@ https://www.npmjs.com/package/chalk
 
 > npm i chalk
 
+##########################################################################################
+#     travailler avec Global modules packages and nodemon
+##########################################################################################
+nodemon permet de lancer une commande comme > node app.js mais voir les modif en live
 
+> npm i nodemon -g
+et pour le lancer
+> nodemon app.js
 
 
