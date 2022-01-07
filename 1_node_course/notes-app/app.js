@@ -1,11 +1,20 @@
-const yargs = require('yargs')
-const notes = require('./notes')
+
+// const yargs = require('yargs')
+// const notes = require('./notes')
+import yargs from 'yargs'
+import { hideBin } from 'yargs/helpers'
+import notes from './notes.js'
+
+const yarg = yargs(hideBin(process.argv))
+
+// Yargs stored version number
+// yarg.version('1.0.0')
 
 // pour lancer l'appication, tapez la commande suivante dans un terminale
 // >  node app.js add --title="travailler mon code" --body="apprendre framework"
 
 // create add command
-yargs.command({
+yarg.command({
     command: 'add',
     describe: "add a new note",
     builder: {
@@ -26,7 +35,7 @@ yargs.command({
 })
 
 // fonctionalité de suppression de note
-yargs.command({
+yarg.command({
     command: 'remove',
     describe: 'remove a note ',
     builder: {
@@ -44,6 +53,6 @@ yargs.command({
 
 
 // pour l'afficher à l'ecran
-yargs.parse()
+yarg.parse()
 
 

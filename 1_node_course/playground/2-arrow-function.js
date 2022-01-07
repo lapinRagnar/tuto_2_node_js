@@ -22,6 +22,7 @@
 // event.afficherListeInvite()
 
 // mains on peut le faire avec ca
+// on enleve le mot clé function et le ":"
 
 
 // const event = {

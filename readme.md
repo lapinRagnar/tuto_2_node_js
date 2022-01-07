@@ -55,6 +55,9 @@ console.log(command);
 ##########################################################################################
 
 https://www.npmjs.com/package/yargs
+
+pour regler pb yarg (https://github.com/yargs/yargs/issues/1854)
+
 npm i yargs
 
 const yargs = require('yargs')

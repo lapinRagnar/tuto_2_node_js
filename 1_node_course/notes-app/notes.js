@@ -1,4 +1,6 @@
-const fs = require('fs')
+// const fs = require('fs')
+import chalk from 'chalk'
+import fs from 'fs'
 
 const getNotes = function (){
     return "Your notes ..."
@@ -29,11 +31,17 @@ const addNote = function(title, body){
 const removeNote = function(title){
     console.log(title);
     const notes = loadNotes()
-    notesToKeep = notes.filter(function(note){
+    const notesToKeep = notes.filter(function(note){
         return note.title !== title                 // retourne true si le titre est trouvé
     })
+
+    if (notes.length > notesToKeep.length){
+        console.log(chalk.green.inverse('la note a été bien supprimée!'));
+        saveNotes(notesToKeep)
+    }else{
+        console.log(chalk.red.inverse('note introuvable!'));
+    }
     
-    saveNotes(notesToKeep)
 }
 
 const saveNotes = function(notes){
@@ -51,8 +59,15 @@ const loadNotes = function(){
     }
 }
 
-module.exports = {
-    getNotes: getNotes,
-    addNote: addNote, 
-    removeNote: removeNote
+export default {
+    getNotes,
+    addNote, 
+    removeNote
 }
+
+// ne marche plus quand j'ai installé chalk
+// module.exports = {
+//     getNotes: getNotes,
+//     addNote: addNote, 
+//     removeNote: removeNote
+// }
