@@ -2,16 +2,19 @@
 import chalk from 'chalk'
 import fs from 'fs'
 
-const getNotes = function (){
+const getNotes = () => {
     return "Your notes ..."
 }
 
-const addNote = function(title, body){
+const addNote = (title, body) => {
     const notes = loadNotes()
 
-    const duplicateNotes = notes.filter(function(note){
-        return note.title === title
-    })
+    // const duplicateNotes = notes.filter(function(note){
+    //     return note.title === title
+    // })
+
+    // refactoring avec les fonctions flechée du code ci-dessus
+    const duplicateNotes = notes.filter((note) => note.title === title)
 
     if (duplicateNotes == 0){
         notes.push({
@@ -28,12 +31,10 @@ const addNote = function(title, body){
 
 }
 
-const removeNote = function(title){
+const removeNote = (title) => {
     console.log(title);
     const notes = loadNotes()
-    const notesToKeep = notes.filter(function(note){
-        return note.title !== title                 // retourne true si le titre est trouvé
-    })
+    const notesToKeep = notes.filter((note) => note.title !== title ) // retourne true si le titre est trouvé
 
     if (notes.length > notesToKeep.length){
         console.log(chalk.green.inverse('la note a été bien supprimée!'));
@@ -44,12 +45,12 @@ const removeNote = function(title){
     
 }
 
-const saveNotes = function(notes){
+const saveNotes = (notes) => {
     const dataJSON = JSON.stringify(notes)
     fs.writeFileSync('notes.json', dataJSON)
 }
 
-const loadNotes = function(){
+const loadNotes = () => {
     try{
         const dataBuffer = fs.readFileSync('notes.json')
         const dataJSON = dataBuffer.toString() 
