@@ -14,9 +14,10 @@ const addNote = (title, body) => {
     // })
 
     // refactoring avec les fonctions flechée du code ci-dessus
-    const duplicateNotes = notes.filter((note) => note.title === title)
+    // const duplicateNotes = notes.filter((note) => note.title === title)
+    const duplicateNote = notes.find((note) => note.title === title)
 
-    if (duplicateNotes == 0){
+    if ( !duplicateNote ){
         notes.push({
             title: title,
             body: body
