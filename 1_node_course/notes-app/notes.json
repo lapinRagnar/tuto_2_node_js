@@ -1,1 +1,10 @@
-[{"title":"c","body":"c"},{"title":"e","body":"eee"}]
+[
+    {
+        "title": "c",
+        "body": "c"
+    },
+    {
+        "title": "e",
+        "body": "eee"
+    }
+]

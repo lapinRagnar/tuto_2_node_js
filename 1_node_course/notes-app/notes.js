@@ -2,6 +2,22 @@
 import chalk from 'chalk'
 import fs from 'fs'
 
+
+const loadNotes = () => {
+    try{
+        const dataBuffer = fs.readFileSync('notes.json')
+        const dataJSON = dataBuffer.toString() 
+        return JSON.parse(dataJSON)
+    }catch (e){
+        return []
+    }
+}
+
+const saveNotes = (notes) => {
+    const dataJSON = JSON.stringify(notes)
+    fs.writeFileSync('notes.json', dataJSON)
+}
+
 const getNotes = () => {
     return "Your notes ..."
 }
@@ -55,26 +71,28 @@ const listNotes = () => {
     });
 }
 
-const saveNotes = (notes) => {
-    const dataJSON = JSON.stringify(notes)
-    fs.writeFileSync('notes.json', dataJSON)
-}
+const readNote = (title) => {
+    const notes = loadNotes()
+    const  note = notes.find((note) => note.title == title)
 
-const loadNotes = () => {
-    try{
-        const dataBuffer = fs.readFileSync('notes.json')
-        const dataJSON = dataBuffer.toString() 
-        return JSON.parse(dataJSON)
-    }catch (e){
-        return []
+    if (note) {
+        console.log(chalk.inverse(note.title));
+        console.log(note.body);
+    }else{
+        console.log(chalk.red.inverse('not introuvable'));
     }
 }
+
+
+
+
 
 export default {
     getNotes,
     addNote, 
     removeNote,
-    listNotes
+    listNotes,
+    readNote
 }
 
 // ne marche plus quand j'ai installé chalk
