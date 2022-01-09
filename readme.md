@@ -161,4 +161,29 @@ const dataJSON2 = JSON.stringify(dataJS)
 fs.writeFileSync('1_4-data.json', dataJSON2)
 
 
+##########################################################################################
+#     debugger
+##########################################################################################
+################
+
+1. utilier console.log
+
+2. ==> taper debugger à l'endroit ou l'on veut debugger
+   ==> ensuite dans une console, tapez:
+   > node inspect app.js .....(et les options si on en a) 
+   ou
+   > node --inspect-brk app.js --title="titre" --body="body"
+   ==> ensuite dans chrome tapez:
+        http://chrome://inspect
+
+3. message d'erreur
+
+
+
+##########################################################################################
+#     asynchronous
+##########################################################################################
+################
+
+
 

@@ -18,9 +18,6 @@ const saveNotes = (notes) => {
     fs.writeFileSync('notes.json', dataJSON)
 }
 
-const getNotes = () => {
-    return "Your notes ..."
-}
 
 const addNote = (title, body) => {
     const notes = loadNotes()
@@ -88,7 +85,6 @@ const readNote = (title) => {
 
 
 export default {
-    getNotes,
     addNote, 
     removeNote,
     listNotes,
