@@ -1,0 +1,24 @@
+{
+  "name": "2_tuto_2",
+  "version": "1.0.0",
+  "description": "lien du tuto",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lapinRagnar/tuto_2_node_js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lapinRagnar/tuto_2_node_js/issues"
+  },
+  "homepage": "https://github.com/lapinRagnar/tuto_2_node_js#readme",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "request": "^2.88.0"
+  }
+}

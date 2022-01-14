@@ -185,5 +185,16 @@ fs.writeFileSync('1_4-data.json', dataJSON2)
 ##########################################################################################
 ################
 
+1. call stack - callback queue - and envnt loop
+2. making http requests
+
+    api meteo 
+    https://darksky.net/forecast/45.7674,4.8351/us12/en
+
+    https://weatherstack.com/
+    
+    > npm i request
+
+
 
 
