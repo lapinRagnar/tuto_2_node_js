@@ -20,3 +20,14 @@
     const publicDirectoryPath = path.join(__dirname, '../public')
 
 
+#####
+#   Serving up CSS, JS, Images, and More
+#####
+
+- créer un fichier public/css/style.css
+- créer un fichier public/css/style.css
+
+- mettre un link:css dans index.html et puis ecrire son css tranquilou! 
+- mettre le script dans index.html et puis ecrire son css tranquilou! 
+
+
