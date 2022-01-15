@@ -4,12 +4,20 @@ const app = express()
 const port = 8080
 
 // le routing
+// render un html
 app.get('', (req, res) => {
-    res.send('salut tout le monde')
+    res.send(` 
+        <h1> Bienvenue sur mon super site </h1>
+    `)
 })
 
+// render un json
 app.get('/help', (req, res) => {
-    res.send('page d\' aide ')
+    res.send({
+        titre: "mon super titre",
+        nom: "mon super nom",
+        prenom: "mon super prénom"
+    })
 })
 
 app.get('/about', (req, res) => {
