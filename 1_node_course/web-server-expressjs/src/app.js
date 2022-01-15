@@ -3,13 +3,16 @@ const express = require('express');
 
 const app = express()
 const port = 8080
-const publicDirectoryPath = path.join(__dirname, '../public')
 
-// pour utiliser un template dynamique avec hbs
+const publicDirectoryPath = path.join(__dirname, '../public')
+const viewsPath = path.join(__dirname, '../templates')
+
+// set up un template dynamique avec hbs - handlbars engine
 app.set('view engine', 'hbs')
+app.set('views', viewsPath )
 
 // permet d'afficher la page public/index.html - donc plus besoin de mettre la route app.get('', (req, res) => { res.send(`.... `) })
-// on peut supprimer les routes
+// on peut supprimer les routes et uliser des pages statiques
 // et pour acceder a la page on fait, localhost ou localhost/about.html ou localhost/help.html
 app.use(express.static(publicDirectoryPath))
 

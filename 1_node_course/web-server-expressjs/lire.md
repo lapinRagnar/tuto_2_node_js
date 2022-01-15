@@ -55,6 +55,15 @@ nb: on peut supprimer les pages statique qu'on a créer dans public
 
 
 
+#####
+# Customizing the Views Directory - utilisation des partials
+#####
+
+- renomer views en templates
+
+-  dans src/app.js:
+    const viewsPath = path.join(__dirname, '../templates')
+    app.set('views', viewsPath )
 
 
 
