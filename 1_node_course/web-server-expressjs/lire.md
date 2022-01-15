@@ -31,3 +31,30 @@
 - mettre le script dans index.html et puis ecrire son css tranquilou! 
 
 
+#####
+#   Dynamic Pages with Templating 
+#####
+
+Handlebars.js
+--------------
+Handlebars.js is an extension to the Mustache templating language created by Chris Wanstrath.
+https://handlebarsjs.com/guide/
+
+npm hbs : 
+------
+est plus facile à integer avec express js 
+https://www.npmjs.com/package/hbs
+
+> npm install hbs
+
+- créer un dossier et fichier views/index.hbs
+- créer un dossier et fichier views/about.hbs
+- créer un dossier et fichier views/help.hbs
+
+nb: on peut supprimer les pages statique qu'on a créer dans public
+
+
+
+
+
+
