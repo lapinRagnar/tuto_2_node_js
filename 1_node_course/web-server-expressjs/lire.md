@@ -77,3 +77,10 @@ créer les pages statiques :
 dans la page ou l'on veut inclure les partiales, on fait:
 {{>header}}
 {{>footer}}
+
+
+#####
+# 404 Pages
+#####
+
+

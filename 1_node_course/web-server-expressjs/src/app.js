@@ -41,6 +41,14 @@ app.get('/weather-app', (req, res) => {
     res.send("Page météo")
 })
 
+app.get('*', (req, res) => {
+    res.render("404", {
+        title: '404',
+        name: 'moi même',
+        errorMessage: 'Page introuvable!'
+    })
+})
+
 // lancer le server
 app.listen(port, () => {
     console.log(` le serveur est lancé dans localhost:${port}  `);
