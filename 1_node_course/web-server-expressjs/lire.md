@@ -66,4 +66,14 @@ nb: on peut supprimer les pages statique qu'on a créer dans public
     app.set('views', viewsPath )
 
 
+#####
+# Advanced Templating - utilisation des partials
+#####
 
+créer les pages statiques :
+- partials/header.hbs
+- partials/footer.hbs
+
+dans la page ou l'on veut inclure les partiales, on fait:
+{{>header}}
+{{>footer}}

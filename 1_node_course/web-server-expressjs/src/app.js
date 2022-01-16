@@ -1,15 +1,19 @@
 const path = require('path');
 const express = require('express');
+const hbs = require('hbs');
 
 const app = express()
 const port = 8080
 
+// definir les chemins
 const publicDirectoryPath = path.join(__dirname, '../public')
-const viewsPath = path.join(__dirname, '../templates')
+const viewsPath = path.join(__dirname, '../templates/views')
+const partialsPath = path.join(__dirname, '../templates/partials')
 
 // set up un template dynamique avec hbs - handlbars engine
 app.set('view engine', 'hbs')
 app.set('views', viewsPath )
+hbs.registerPartials(partialsPath)
 
 // permet d'afficher la page public/index.html - donc plus besoin de mettre la route app.get('', (req, res) => { res.send(`.... `) })
 // on peut supprimer les routes et uliser des pages statiques
