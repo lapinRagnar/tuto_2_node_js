@@ -94,3 +94,47 @@ dans la page ou l'on veut inclure les partiales, on fait:
 #####
 # deployement - heroku -github
 #####
+
+- installer heroku sur windows
+    https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up
+
+- creer un repository sur github
+
+- la commande, pour copier notre clé ssh sur heroku
+> heroku keys:add
+
+- creer une nouvelle application sur heroku a partir de notre windows
+> heroku create nom-de-l-application
+
+=> cela donne l'adresse de notre site en même temps, et le nom du repository git de notre projet automatiquement
+
+- creer un script dans notre packages.json:
+  ....,
+  ....,
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  ....,
+  ....,
+
+- sur windows localement on peut lancer notre application par (sur heroku cela se lance automatiquement)
+> npm run start
+
+- dans src/app.js, ajouter le port pour heroku et local sour notre windows
+    const port = process.env.PORT || 8080
+
+
+- ensuite faire un git push dans github
+- et si on fait > git remote, on a:
+    heroku 
+    origin
+- ensuite on fait:
+  git push heroku master
+
+
+- dans notre exemple 
+  https://meteonodejsexpress.herokuapp.com/ | https://git.heroku.com/meteonodejsexpress.git
+  je l'ai mis dans le dossier web-server-expressjs
+
+
+

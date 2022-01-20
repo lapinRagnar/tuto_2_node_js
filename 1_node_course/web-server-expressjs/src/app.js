@@ -3,7 +3,9 @@ const express = require('express');
 const hbs = require('hbs');
 
 const app = express()
-const port = 8080
+
+// process.env.PORT c'est pour heroku et 8080 c'est pour lancer l'app en local
+const port = process.env.PORT || 8080
 
 // definir les chemins
 const publicDirectoryPath = path.join(__dirname, '../public')
