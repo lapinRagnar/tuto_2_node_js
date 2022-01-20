@@ -14,9 +14,22 @@
     <h1> {{ title }} </h1>
     <h2> {{ content}} </h2>
 
-    <img src="/img/puma.jpg" alt="" sizes="" srcset="">
+    <h1>La météo</h1>
+    <form>
+        <input type="text" placeholder="tapez ton adresse">
+        <button type="submit">Valider</button>
+    </form>
+
+    <p id="message-1"></p>
+    <p id="message-2"></p>
+
+    <div class="image-tigre">
+        <img src="/img/puma.jpg" alt="" sizes="" srcset="">
+    </div>
 
     {{>footer}}
+
+    <script src="js/app.js"></script>
 
 </body>
 </html>

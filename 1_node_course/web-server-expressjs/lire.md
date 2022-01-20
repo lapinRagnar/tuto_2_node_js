@@ -84,3 +84,13 @@ dans la page ou l'on veut inclure les partiales, on fait:
 #####
 
 
+
+#####
+# Browser HTTP Requests with Fetch
+#####
+
+
+
+#####
+# deployement - heroku -github
+#####
