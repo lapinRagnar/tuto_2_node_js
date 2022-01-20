@@ -112,7 +112,8 @@ dans la page ou l'on veut inclure les partiales, on fait:
   ....,
   ....,
   "scripts": {
-    "start": "node src/app.js"
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js -e js,hbs"
   },
   ....,
   ....,
@@ -137,4 +138,13 @@ dans la page ou l'on veut inclure les partiales, on fait:
   je l'ai mis dans le dossier web-server-expressjs
 
 
+#####
+# installer nodemon - localement en dev
+#####
+
+> npm install nodemon --save-dev
+
+Attention on ne peut plus lancer nodemon avec > nodemon src/app.js (ca fonctionne uniquement quand on l'installe globalement)
+il faut utiliser:
+> npm run dev  
 
